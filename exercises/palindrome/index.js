@@ -6,6 +6,7 @@
 // --- Examples:
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
+// ----------------------------------------------------
 
 function palindrome(str) {
     debugger
@@ -17,6 +18,21 @@ if (newString === str) {
 }
 }
 
-palindrome('abba abba') 
+// function palindrome(str) {
+//     const reversed = str.split('').reverse().join('')
+//     return reversed === str 
+// }
+
+// function palindrome(str) {
+//     // every() array helper
+//     // array.every((val) => val > 5);  [0, 10,14] =>// false, true, true
+//     return str.split('').every((char, i) => {
+//         return char === str[str.length - i - 1]
+//     })
+// }
+
+
+
+// palindrome('abba abba') 
 
 module.exports = palindrome;
