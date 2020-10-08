@@ -43,3 +43,6 @@ function vowels(str) {
 
 // vowels('Hi There!')
 module.exports = vowels;
+
+// https://www.w3resource.com/javascript-exercises/javascript-function-exercise-7.php
+// https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms/counting-the-vowels-in-a-string-of-text
