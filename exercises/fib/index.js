@@ -22,6 +22,10 @@
 // }
 
 // recursive
+// each time a single element is added to a collection,
+// processing power required doubles
+//  EXPONENTIAL TIME: 2^n
+// any Expo Time created is an automatic no-no - ITERATIVE solution is MUCH MORE EFFICIENT
 function fib(n) {
     if (n < 2) {
         return n
