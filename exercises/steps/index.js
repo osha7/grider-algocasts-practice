@@ -33,48 +33,48 @@
 //     }
 // }
 
-// function steps(n) {
-//     // think of as indeces (matrix)
-//     // iterating through rows and columns
-//     for (let row = 0; row < n; row++) {
-//         let stair = ''
-//         // if the current column is equal to or less than the current row -> we get a pound
-//         // if c is greater than r -> we get a space
-//         for (let column = 0; column < n; column++) {
-//             if (column <= row) {
-//                 stair += '#'
-//             } else {
-//                 stair += ' '
-//             }
-//         }
-//         console.log(stair) 
-//         // console.log before you leave original for loop
-//     }
-// }
+function steps(n) {
+    // think of as indeces (matrix)
+    // iterating through rows and columns
+    for (let row = 0; row < n; row++) {
+        let stair = ''
+        // if the current column is equal to or less than the current row -> we get a pound
+        // if c is greater than r -> we get a space
+        for (let column = 0; column < n; column++) {
+            if (column <= row) {
+                stair += '#'
+            } else {
+                stair += ' '
+            }
+        }
+        console.log(stair) 
+        // console.log before you leave original for loop
+    }
+}
 
 // using RECURSION :
-function steps(n, row = 0, stair = '') {
-//    using recursion: Recursive Solution
-    // first establish base case
-    if (n === row) {
-        return
-    } 
-    if (n === stair.length) {
-        // only recursion:
-        console.log(stair)
-        steps(n, row + 1)
-        // don't call stair bc on next want to call empty stair again
-        return
-    }
-    // if (stair.length <= row) {
-    //     stair += '#'
-    // } else {
-    //     stair += ' '
-    // }
-    const add = stair.length <= row ? '#' : ' ';
-    // still working on same row here:
-    steps(n, row, stair + add)
-}
+// function steps(n, row = 0, stair = '') {
+// //    using recursion: Recursive Solution
+//     // first establish base case
+//     if (n === row) {
+//         return
+//     } 
+//     if (n === stair.length) {
+//         // only recursion:
+//         console.log(stair)
+//         steps(n, row + 1)
+//         // don't call stair bc on next want to call empty stair again
+//         return
+//     }
+//     // if (stair.length <= row) {
+//     //     stair += '#'
+//     // } else {
+//     //     stair += ' '
+//     // }
+//     const add = stair.length <= row ? '#' : ' ';
+//     // still working on same row here:
+//     steps(n, row, stair + add)
+// }
     
 module.exports = steps;
 

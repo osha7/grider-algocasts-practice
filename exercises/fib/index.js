@@ -8,6 +8,28 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+// // for every increase in n -> calculate 1 additional number -> never going to change
+// // LINEAR RUNTIME
+// // shortcut: have a for loop  - increment up to fixed target 
+// // LINEAR RUNTIME
+// function fib(n) {
+//     // iterative:
+//     let newArray = [0, 1]
+//     for (let i = 2; i <= n; i++ ) {
+//         newArray.push(newArray[i-2] + newArray[i-1])
+//     }
+//     return newArray[n]
+// }
+
+// recursive
+function fib(n) {
+    if (n < 2) {
+        return n
+    } else {
+        return fib(n-1) + fib(n-2)
+    }
+}
+
+
 
 module.exports = fib;
